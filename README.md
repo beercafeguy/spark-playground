@@ -1,4 +1,4 @@
-# spark playground
+# spark playground (version 1.6.0 with Scala version 2.10.5)
 Reference of commands for spark shell
 
 #### Start spark shell right way 
