@@ -14,3 +14,7 @@ spark-shell --master yarn-client \
 
 #### Get application ID of spark shell <br>
 `sc.applicationId`
+
+#### Convert DF to rdd <br>
+`val cartesianDF=cartesianRDD.toDF("number1","number2")` <br>
+`val cartesianRDD=cartesianDF.rdd`
