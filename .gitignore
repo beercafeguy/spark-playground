@@ -1,0 +1,6 @@
+.settings
+/scala-maven/.project
+/scala-maven/.classpath
+target
+.idea
+project
