@@ -15,7 +15,6 @@ object FlumeDepartmentHitCounter {
     val streamingContext=new StreamingContext(conf,Seconds(windowInterval))
 
     val logs = FlumeUtils.createPollingStream(streamingContext,hostname, portNumber)
-    logs.filter( log => new String(log.event.getBody.array()).contains(""))
     val departments=logs.filter( message => {
       val m=new String(message.event.getBody.array()).split(" ")
       m(6).startsWith("/department/")
