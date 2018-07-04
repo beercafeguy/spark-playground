@@ -9,3 +9,6 @@
 
 * change number of partitions <br>
 `repartition and coalesce`
+
+* Use of customer partitioner <br>
+`pairRdd.partitionBy(new DomainPartitioner).map(_._1).glom().map(_.toSet.toSeq.length).take(5)`
