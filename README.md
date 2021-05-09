@@ -18,3 +18,10 @@ spark-shell --master yarn-client \
 #### Convert DF to rdd <br>
 `val cartesianDF=cartesianRDD.toDF("number1","number2")` <br>
 `val cartesianRDD=cartesianDF.rdd`
+
+
+#### Print properties on console #####
+`spark.sql("SET -v").select("key","value").show(20,false)`
+
+Check if a property is modifiable or not.
+` spark.conf.isModifiable("spark.sql.shuffle.partitions")`
