@@ -23,5 +23,5 @@ spark-shell --master yarn-client \
 #### Print properties on console #####
 `spark.sql("SET -v").select("key","value").show(20,false)`
 
-Check if a property is modifiable or not.
+Check if a property is modifiable or not. <br>
 ` spark.conf.isModifiable("spark.sql.shuffle.partitions")`
