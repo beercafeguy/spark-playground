@@ -24,4 +24,12 @@ spark-shell --master yarn-client \
 `spark.sql("SET -v").select("key","value").show(20,false)`
 
 Check if a property is modifiable or not. <br>
-` spark.conf.isModifiable("spark.sql.shuffle.partitions")`
+` spark.conf.isModifiable("spark.sql.shuffle.partitions")` <br>
+
+#### Note from spark docs
+
+Properties set directly on the SparkConf take highest precedence, then flags passed to spark-submit or spark-shell, then options in the spark-defaults.conf file. A few configuration keys have been renamed since earlier versions of Spark; in such cases, the older key names are still accepted, but take lower precedence than any instance of the newer key.
+<br>
+https://spark.apache.org/docs/latest/configuration.html#dynamically-loading-spark-properties
+
+
