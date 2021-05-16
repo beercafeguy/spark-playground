@@ -5,13 +5,16 @@ import org.apache.spark.sql.SparkSession
 
 object BeerSessionBuilder {
 
-  def getSession(): SparkSession = {
+  def getSession(appName:String): SparkSession = {
     SparkSession.builder
       .master("local[*]")
       .config(getConf())
-      .appName("PivotSparkApp")
+      .appName(appName)
       .getOrCreate()
 
+  }
+  def getSession(): SparkSession = {
+    getSession("Simple Spark App")
   }
 
   private def getConf(): SparkConf = {
