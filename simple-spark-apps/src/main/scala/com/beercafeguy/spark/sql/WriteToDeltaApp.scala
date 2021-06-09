@@ -7,7 +7,7 @@ object WriteToDeltaApp {
 
   @transient lazy val logger: Logger = Logger.getLogger(getClass.getName)
 
-  val deltaPath="/football/matches_delta"
+  val deltaPath="football/matches_delta"
   def main(args: Array[String]): Unit = {
     logger.info("Creating session")
     val spark=BeerSessionBuilder.getSession()
